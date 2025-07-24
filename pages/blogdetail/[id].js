@@ -1,5 +1,6 @@
 import { useRouter } from "next/router";
 import { workData } from "@/assets/assets";
+import Image from "next/image";
 
 export default function BlogDetail({ textColor, bgColor }) {
   const router = useRouter();
@@ -21,10 +22,12 @@ export default function BlogDetail({ textColor, bgColor }) {
     <div className={`w-full min-h-screen pt-24 mt-16 p-4 ${textColor}`}>
       <div className="max-w-4xl mx-auto">
         {/* Featured Image */}
-        <img
+        <Image
           src={blog.bgImage}
           alt={blog.title}
           className="w-full h-64 md:h-96 object-cover rounded-lg mb-8"
+          width={800}
+          height={400}
         />
 
         {/* Blog Title */}

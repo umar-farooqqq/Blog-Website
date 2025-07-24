@@ -46,7 +46,7 @@ const Signup = ({ textColor, bgColor }) => {
 
           <div>
             <p>
-              Don't have an account?{" "}
+              {"Don't have an account?"}
               <a href="#" className="text-white-500 font-bold">
                 Create
               </a>
