@@ -4,7 +4,9 @@ import { SunMoonIcon, MenuIcon } from "lucide-react";
 import Link from "next/link";
 
 const Navbar = ({ darkMode, setDarkMode, textColor }) => {
+
   const [menuOpen, setMenuOpen] = useState(false);
+  const setMenuClose = () => setMenuOpen(false);
 
   const toggleBorder = darkMode ? "border-gray-300" : "border-gray-500";
 
@@ -51,17 +53,14 @@ const Navbar = ({ darkMode, setDarkMode, textColor }) => {
 
       {/* Mobile Dropdown Menu */}
       {menuOpen && (
-        <div className="absolute top-full right-5 mt-2 w-40 rounded-lg shadow-lg flex flex-col md:hidden z-50 animate-fade-in">
-          <Link href="/" className="px-6 py-3 hover:scale-105 rounded-t-lg">
+        <div className={`absolute top-full right-5 mt-2 w-40 rounded-lg shadow-lg flex flex-col md:hidden z-50 animate-fade-in backdrop-blur-3xl bg-opacity-80 ${toggleBorder} ${darkMode ? "bg-gray-800" : "bg-gray-200"}`}>
+          <Link href="/" className="px-6 py-3 hover:scale-105 rounded-t-lg" onClick={setMenuClose}>
             Home
           </Link>
-          <Link href="/about" className="px-6 py-3 hover:scale-105">
+          <Link href="/about" className="px-6 py-3 hover:scale-105" onClick={setMenuClose}>
             About
           </Link>
-          <Link
-            href="/login"
-            className="px-6 py-3 hover:scale-105 rounded-b-lg"
-          >
+          <Link href="/login" className="px-6 py-3 hover:scale-105 rounded-b-lg" onClick={setMenuClose}>
             Login
           </Link>
         </div>
