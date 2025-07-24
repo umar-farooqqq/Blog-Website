@@ -10,7 +10,7 @@ const Navbar = ({ darkMode, setDarkMode, textColor }) => {
 
   return (
     <nav
-      className={`w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between ${textColor} z-[100] backdrop-blur-xl bg-opacity-80 border-b ${toggleBorder} ${
+      className={`w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between ${textColor} z-[100] backdrop-blur-lg bg-opacity-80 border-b ${toggleBorder} ${
         darkMode ? "bg-gray-900/70" : "bg-white/70"
       }`}
     >

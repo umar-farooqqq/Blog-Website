@@ -26,7 +26,7 @@ export default function Home({ textColor, bgColor }) {
                 >
                   <div>
                     <h2 className="font-semibold">{project.title}</h2>
-                    <p className="text-xs text-justify line-clamp-4 mr-4">
+                    <p className="text-xs text-justify mr-4 line-clamp-3 lg:line-clamp-4 ">
                       {project.description}
                     </p>
                   </div>
