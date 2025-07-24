@@ -43,7 +43,7 @@ export default function BlogDetail({ textColor, bgColor }) {
           onClick={() => router.back()}
           className={`mt-8 px-6 py-3 ${bgColor} rounded-lg hover:opacity-80 transition-opacity`}
         >
-          ← Back to Blogs
+          ⬅ Back to Blogs
         </button>
       </div>
     </div>
