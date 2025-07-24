@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const Signup = ({ textColor, bgColor }) => {
@@ -55,10 +56,13 @@ const Signup = ({ textColor, bgColor }) => {
 
         {/* Image Section */}
         <div className="w-full md:w-1/2 hidden md:block">
-          <img
-            src="https://images.unsplash.com/photo-1542435503-956c469947f6?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YmxvZ3xlbnwwfHwwfHx8MA%3D%3D"
+          <Image
+            src="/login.jpg"
             alt="Login"
             className="w-full h-full object-cover"
+            width={500}
+            height={500}
+          
           />
         </div>
       </div>
