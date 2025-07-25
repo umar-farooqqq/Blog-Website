@@ -9,7 +9,7 @@ const Signup = ({ textColor, bgColor }) => {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    
+
     if (email === "hello@example.com" && password === "123456") {
       router.push("/blogpostform");
     } else {
@@ -57,11 +57,12 @@ const Signup = ({ textColor, bgColor }) => {
               required
             />
           </div>
-          <div
+          <button
+            type="submit"
             className={`bg-blue-500 text-center p-2 rounded-md mt-5 w-full cursor-pointer hover:bg-blue-600 transition-colors ${textColor}`}
           >
-            <button type="submit">Sign in</button>
-          </div>
+            Sign in
+          </button>
           <br />
           <div>
             <p>
